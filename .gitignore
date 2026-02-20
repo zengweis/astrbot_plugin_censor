@@ -27,8 +27,6 @@ share/python-wheels/
 MANIFEST
 
 # PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
 
@@ -48,6 +46,35 @@ coverage.xml
 *.cover
 *.py.cover
 .hypothesis/
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# 日志和临时文件
+*.log
+logs/
+audit_logs/
+*.audit
+*.tmp
+*.bak
+
+# 配置文件（避免提交敏感信息）
+config.yaml
+config.yml
+config.local.yaml
+.env
+.env.local
+.env.*.local
+
+# 缓存
+.cache/
+*.cache
 .pytest_cache/
 cover/
 
