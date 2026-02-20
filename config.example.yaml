@@ -1,0 +1,6 @@
+# AI 敏感内容检测插件配置
+
+# OpenAI API 配置（必需）
+nlp_api_url: "https://api.openai.com/v1/chat/completions"
+nlp_api_key: "sk-your-api-key-here"
+
