@@ -4,10 +4,9 @@
 
 ## 功能
 
-- ✅ **AI 文本检测** - 使用 GPT 检测违禁词汇和内容
-- ✅ **AI 图片检测** - 使用 GPT-4 Vision 检测图片中的违禁内容
-- ✅ **自动撤回** - 检测到违禁内容立即撤回
-- ✅ **防重复检测** - 同一条消息不会被重复检测
+**文本检测**
+**图片检测**
+**自动撤回**
 
 ## 快速开始
 
@@ -39,18 +38,12 @@ plugins:
 ```yaml
 plugins:
   censor:
-    nlp_api_url: "https://api.openai.com/v1/chat/completions"  # OpenAI API 地址
-    nlp_api_key: "sk-xxx..."                                     # OpenAI API 密钥
+    nlp_api_url: "https://api.openai.com/v1/chat/completions"  
+    nlp_api_key: "sk-xxx..."                                     
 ```
 
-获取 API 密钥：https://platform.openai.com/account/api-keys
 
-## 工作原理
 
-1. **监听消息** - 插件监听所有消息（文本和图片）
-2. **生成哈希** - 对消息进行哈希处理，防止重复检测
-3. **AI 检测** - 将消息发送给 GPT 进行审核
-4. **撤回处理** - 如果检测到违禁内容，自动撤回消息
 
 ## 支持的内容类型
 
@@ -89,11 +82,6 @@ tail -f logs/astrbot.log | grep censor
 - 某些平台可能不支持撤回功能
 - 检查机器人是否有权限
 
-## 性能指标
-
-- **文本检测** - 2-5 秒（取决于内容长度）
-- **图片检测** - 5-15 秒
-- **防重复检测** - 保留最近 1000 条消息哈希
 
 ## 相关链接
 
